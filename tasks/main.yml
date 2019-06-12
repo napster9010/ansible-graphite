@@ -117,16 +117,16 @@
   service:
     name: uwsgi
     enabled: yes
-  when: graphite_enable_uwsgi
+  when: graphite_enable_uwsgi == true
 
 - name: Enable carbon-cache service
   service:
     name: carbon-cache
     enabled: yes
-  when: graphite_enable_carbon_cache
+  when: graphite_enable_carbon_cache == true
 
 - name: Enable carbon-relay service
   service:
     name: carbon-relay
     enabled: yes
-  when: graphite_enable_carbon_relay
+  when: graphite_enable_carbon_relay == true
